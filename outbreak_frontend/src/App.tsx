@@ -3,7 +3,7 @@ import ForceGraph2D from 'react-force-graph-2d';
 import { Area, Bar, BarChart, CartesianGrid, ComposedChart, ErrorBar, Legend, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import axios from 'axios';
 
-const API_BASE = (import.meta.env.VITE_API_BASE as string | undefined) || 'http://127.0.0.1:8001';
+const API_BASE = (import.meta.env.VITE_API_BASE as string | undefined) || 'http://127.0.0.1:8000';
 
 const COLOR_MAP: Record<number, string> = {
   0: '#94a3b8',
@@ -200,12 +200,6 @@ function App() {
     }
     return timeline;
   }, [comparisonData, showComparison, timeline]);
-
-  const nodesAtStep = useMemo(() => {
-    if (!currentTimeline.length) return {} as Record<number, number>;
-    const current = currentTimeline[Math.min(currentStep, currentTimeline.length - 1)] ?? [];
-    return Object.fromEntries(current.map((state, idx) => [idx, state]));
-  }, [currentStep, currentTimeline]);
 
   const paintNodeForTimeline = useCallback((timelineSource: number[][], interventionSet: number[]) => (node: any, ctx: CanvasRenderingContext2D) => {
     const currentStepStates = timelineSource[Math.min(currentStep, timelineSource.length - 1)] ?? [];

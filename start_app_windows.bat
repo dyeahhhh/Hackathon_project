@@ -4,9 +4,9 @@ start "Outbreak Backend" cmd /k "D:\Hackathon\.venv\Scripts\python.exe -m uvicor
 
 timeout /t 3 >nul
 cd /d "D:\Hackathon\outbreak_frontend"
-start "Outbreak Frontend" cmd /k "npm install && npm run dev -- --host 127.0.0.1 --port 4173"
+start "Outbreak Frontend" cmd /k "npm install && npm run dev -- --host 127.0.0.1 --port 5173"
 
 echo.
 echo Backend started on: http://127.0.0.1:8000
- echo Frontend started on: http://127.0.0.1:4173
+echo Frontend started on: http://127.0.0.1:5173
 pause

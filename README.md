@@ -141,13 +141,13 @@ Use this exact command from the backend folder:
 
 ```powershell
 cd D:\Hackathon\outbreak_backend
-D:\Hackathon\.venv\Scripts\python.exe -m uvicorn api.main:app --host 127.0.0.1 --port 8001 --reload
+D:\Hackathon\.venv\Scripts\python.exe -m uvicorn api.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
 The app listens on:
 
 ```text
-http://127.0.0.1:8001
+http://127.0.0.1:8000
 ```
 
 ### Start the frontend
@@ -188,7 +188,7 @@ If a port is already in use, stop the existing process and rerun the server on a
 Make sure you run the command from the backend folder, not from the workspace root. The project imports `api.main` and requires the backend directory to be the active working directory.
 
 ### Frontend API connection fails
-Ensure the frontend is pointing to the same backend port. This project uses port 8001 for the API and port 5173 for the Vite app.
+Ensure the frontend is pointing to the same backend port. This project uses port 8000 for the API and port 5173 for the Vite app.
 
 ## Demo notes
 

@@ -45,4 +45,4 @@ npm run build
 
 ## Notes
 
-The frontend expects the backend to be running on port 8001. If the app is not connected to the backend, evaluation and simulation requests will fail.
+The frontend expects the backend to be running on port 8000. If the app is not connected to the backend, evaluation and simulation requests will fail.

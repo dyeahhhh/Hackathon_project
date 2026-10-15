@@ -6,3 +6,4 @@ scipy
 pydantic
 pytest
 numba
+httpx
